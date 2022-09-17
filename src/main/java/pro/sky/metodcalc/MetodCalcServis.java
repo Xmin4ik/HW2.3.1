@@ -26,7 +26,12 @@ public class MetodCalcServis implements MetodServisInterface{
     }
 
     public String divide(int num1, int num2) {
-        return num1 + "/" + num2 + "=" + (num1 / num2);
+        String result;
+        if (num2 == 0) {
+            result = "На ноль нет деления";
+          //  throw new IllegalArgumentException(result);
+        } else {
+        result = num1 +"/" +num2+"="+(num1/num2);}
+        return result;
     }
-
 }
